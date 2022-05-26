@@ -22,8 +22,19 @@ void step2()
     cc = 0b01000001;    printf("%c \n", cc);  //0b : 2진법
 }
 
+void step3()
+{
+    char cc = 'C';
+    cc = 'C';   printf("%c \n", cc);
+    cc = 67;    printf("%c \n", cc);
+    cc = 0x43;    printf("%c \n", cc);  //0x : 16진법
+    cc = 0103;    printf("%c \n", cc);  //0 : 8진법
+    cc = 0b01000011;    printf("%c \n", cc);  //0b : 2진법
+}
+
 void main()
 {
     //step1();
-    step2();  
+    //step2();  
+    step3();
 }
