@@ -10,11 +10,14 @@
 void main(){
     char str[1024];
     fgets(str, sizeof(str), stdin); //fgets(위치, 길이(크기), 방법)
+    //char str[] = "Hello world";
+    str[strlen(str) - 1] = '\0'; 
+    // fgets 함수의 마지막 '\n' 개행부분을 '\0'으로 바꿔 개행을 방지한다.
     char *ptr = strtok(str," ");
     
     for(int i  = 0; i < strlen(str); i++){ //str 문자의 길이만큼 반복
         if(ptr == NULL) break;
-        else printf("%s\n",ptr);
+        printf("%s\n",ptr);
         ptr = strtok(NULL, " ");
     }
 }
